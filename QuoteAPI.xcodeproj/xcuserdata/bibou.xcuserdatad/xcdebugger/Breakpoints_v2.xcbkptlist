@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0AC6FA38-4B60-4ADC-946D-990E5E776C64"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1058A3F-B3A7-43B4-A4A5-C6433F226863"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuoteAPI/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getQuote()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C1058A3F-B3A7-43B4-A4A5-C6433F226863 - 9327792c864a0da6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;QuoteAPI.Quote&gt;) -&gt; () in QuoteAPI.ViewModel.getQuote() -&gt; ()"
+                  moduleName = "QuoteAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bibou/Documents/Documents%20-%20MacBook%20Pro%20de%20Amandine/Boulot/Simplon/QuoteAPI/QuoteAPI/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  uuid = "C1058A3F-B3A7-43B4-A4A5-C6433F226863 - 9125e80f92f1a680"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;QuoteAPI.CustomError&gt;, Swift.Optional&lt;QuoteAPI.Quote&gt;) -&gt; () in QuoteAPI.ViewModel.getQuote() -&gt; ()"
+                  moduleName = "QuoteAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bibou/Documents/Documents%20-%20MacBook%20Pro%20de%20Amandine/Boulot/Simplon/QuoteAPI/QuoteAPI/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

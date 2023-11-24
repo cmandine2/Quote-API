@@ -40,6 +40,11 @@ enum CustomError: Error {
 
 class QuoteService {
     static let shared = QuoteService()
+    var urlSession = URLSession(configuration: .default)
+    
+    init(session: URLSession = URLSession(configuration: .default)) {
+        self.urlSession = session
+    }
     
     private init() {}
     
@@ -52,20 +57,20 @@ class QuoteService {
         var request = URLRequest(url: quoteUrl)
         request.httpMethod = "GET"
         
-        let urlSession = URLSession(configuration: .default)
         urlSession.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil, let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                callback(CustomError.serverUnavailable, nil)
-                return
+            DispatchQueue.main.async {
+                guard let data = data, error == nil, let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    callback(CustomError.serverUnavailable, nil)
+                    return
+                }
+                
+                guard let quote = try? JSONDecoder().decode(Quote.self, from: data) else {
+                    callback(CustomError.invalidData, nil)
+                    return
+                }
+                
+                callback(nil, quote)
             }
-            
-            guard let quote = try? JSONDecoder().decode(Quote.self, from: data) else {
-                callback(CustomError.invalidData, nil)
-                return
-            }
-            
-            callback(nil, quote)
-            
         }.resume()
     }
 }
